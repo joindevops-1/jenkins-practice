@@ -18,4 +18,16 @@ pipeline {
             }
         }
     }
+
+    post { 
+        always { 
+            echo 'I will Run!'
+        }
+        success{
+            echo "I will only run if success"
+        }
+        failure{
+            echo "I will only run if failure"
+        }
+    }
 }

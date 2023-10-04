@@ -22,6 +22,9 @@ pipeline {
             }
         }
         stage('Test') {
+            when {
+                branch 'production'
+            }
             steps {
                 echo 'Testing....'
             }
